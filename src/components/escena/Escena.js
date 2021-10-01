@@ -1,10 +1,9 @@
-const Escena = () => {
+const Escena = ({ data }) => {
   return (
     <div>
-      <p>
-        El nostre heroi estava surant per l'espai sideral quan a la llunyania va
-        albirar una nau espacial
-      </p>
+      {data.map((item) => (
+        <p key={item}>{item}</p>
+      ))}
     </div>
   );
 };
