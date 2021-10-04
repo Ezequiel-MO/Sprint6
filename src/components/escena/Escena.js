@@ -1,10 +1,12 @@
+import { StyledContainer, StyledDiv } from "../styles";
+
 const Escena = ({ data }) => {
   return (
-    <div>
+    <StyledContainer>
       {data.map((item) => (
-        <p key={item}>{item}</p>
+        <StyledDiv key={item}>{item}</StyledDiv>
       ))}
-    </div>
+    </StyledContainer>
   );
 };
 
