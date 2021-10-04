@@ -22,15 +22,22 @@ export const StyledEntryButton = styled.button`
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 45vh;
-  justify-content: space-around;
+  height: 100vh;
+  justify-content: flex-start;
   align-items: center;
   margin: 2rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  ${({ background }) =>
+    `
+    background-image: url(${background});
+  `}
 `;
 
 export const StyledButtons = styled.div`
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 2rem;
 `;
 
 export const StyledButton = styled.button`
@@ -41,14 +48,15 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledDiv = styled.div`
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid black;
   border-radius: 1rem;
   padding: 0.5rem;
+  margin: 1rem;
   text-align: center;
   ${({ active }) =>
-    active &&
-    `
-    background-color: pink;
-  `}
+    active
+      ? `background-color: pink;`
+      : `background-color:rgba(255,255,255,0.8)`}
 `;

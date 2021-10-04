@@ -2,7 +2,7 @@ import "./App.css";
 import Escena from "./components/escena/Escena";
 import Presentacio from "./components/Presentacio";
 import { useState } from "react";
-import data from "./data.json";
+import { data } from "./data.js";
 
 function App() {
   const [principal, setPrincipal] = useState(false);
